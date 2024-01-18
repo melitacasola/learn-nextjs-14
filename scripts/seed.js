@@ -3,7 +3,7 @@ const {
   invoices,
   customers,
   revenue,
-  users,
+  users
 } = require('../app/lib/placeholder-data.js');
 const bcrypt = require('bcrypt');
 
@@ -20,7 +20,7 @@ async function seedUsers(client) {
       );
     `;
 
-    console.log(`Created "users" table`);
+    console.log(`Created "users" table`)
 
     // Insert data into the "users" table
     const insertedUsers = await Promise.all(
@@ -38,11 +38,11 @@ async function seedUsers(client) {
 
     return {
       createTable,
-      users: insertedUsers,
-    };
+      users: insertedUsers
+    }
   } catch (error) {
     console.error('Error seeding users:', error);
-    throw error;
+    throw error
   }
 }
 
@@ -61,7 +61,7 @@ async function seedInvoices(client) {
   );
 `;
 
-    console.log(`Created "invoices" table`);
+    console.log(`Created "invoices" table`)
 
     // Insert data into the "invoices" table
     const insertedInvoices = await Promise.all(
