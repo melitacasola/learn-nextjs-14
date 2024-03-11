@@ -22,8 +22,9 @@ export default async function InvoicesPage({
     };
     }) {
 
+        const currentPage = Number(searchParams?.page) || 1;
     const query = searchParams?.query || '';
-    const currentPage = Number(searchParams?.page) || 1;
+        //para saber cuantas pagnas tenemos desde db
     const totalPages = await fetchInvoicesPages(query)
 
     return (
